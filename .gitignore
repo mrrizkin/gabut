@@ -7,6 +7,7 @@
 *.dll
 *.so
 *.dylib
+app
 
 # Test binary, built with `go test -c`
 *.test
@@ -19,3 +20,24 @@
 
 # Go workspace file
 go.work
+
+# Database file
+*.sqlite3
+
+# temp files
+*.tmp
+tmp/**/*
+
+# backup files
+*.bak
+*.backup
+
+# IDE files
+.idea
+.vscode
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
