@@ -56,6 +56,7 @@ func Setup(app *fiber.App) *fiber.App {
 		Root:         web.Dist(),
 		NotFoundFile: "index.html",
 		Index:        "index.html",
+		MaxAge:       3600,
 	}))
 
 	return app

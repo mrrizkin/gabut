@@ -1,4 +1,4 @@
-import { Route, Router } from "@solidjs/router";
+import { Route, HashRouter } from "@solidjs/router";
 import { lazy } from "solid-js";
 
 import AdminLayout from "@/layout/admin";
@@ -11,7 +11,7 @@ const NotFoundPage = lazy(() => import("@/pages/404"));
 
 export function Routes() {
   return (
-    <Router root={BaseLayout}>
+    <HashRouter root={BaseLayout}>
       <Route path="/" component={AdminLayout}>
         <Route path="/" component={DashboardPage} />
       </Route>
@@ -19,6 +19,6 @@ export function Routes() {
         <Route path="/" component={AuthPage} />
       </Route>
       <Route path="/*" component={NotFoundPage} />
-    </Router>
+    </HashRouter>
   );
 }
